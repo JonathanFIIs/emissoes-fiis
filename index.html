@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ofertas públicas de fundos imobiliários" />
+    <title>Emissões | Fundos Imobiliários</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=25-text-justify" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="page-shell">
+        <a class="brand" href="https://www.instagram.com/JonathanFIIs" target="_blank" rel="noopener">@Jonathan<span>FIIs</span></a>
+      </div>
+    </nav>
+
+    <main class="page-shell">
+      <header class="hero">
+        <div class="hero-copy" id="top">
+          <p class="eyebrow">Fundos imobiliários</p>
+          <h1>Emissões, Subscrições<br /><em>e IPOs de FIIs</em></h1>
+          <p class="intro">Acompanhe as emissões de FIIs disponíveis no mercado em um só lugar.</p>
+        </div>
+        <div class="updated" aria-live="polite"><span class="status-dot"></span><span id="updated-at">Atualizando dados...</span></div>
+      </header>
+
+      <section class="offers-section" aria-labelledby="offers-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Mercado primário</p>
+            <h2 id="offers-title">Ofertas disponíveis</h2>
+          </div>
+          <div class="offer-controls">
+            <label class="search" for="search-input"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Buscar FII ou gestora" autocomplete="off" /></label>
+            <div class="filters" role="group" aria-label="Filtros de oferta">
+              <button class="filter" data-filter="ativas">Ativas</button>
+              <button class="filter" data-filter="inativas">Inativas</button>
+              <button class="filter" data-filter="todas">Todas</button>
+            </div>
+          </div>
+        </div>
+        <div id="offers" class="offers-grid" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden>Nenhuma oferta encontrada com este filtro.</div>
+        
+        <div id="pagination-wrapper"></div>
+      </section>
+    </main>
+    <footer>Informações para acompanhamento. Consulte sempre os documentos oficiais da oferta antes de investir.</footer>
+    
+    <template id="offer-template">
+      <article class="offer-card">
+        <div class="card-top"><span class="status"></span></div>
+        <div class="fund-title">
+          <div class="fund-mark"></div>
+          <div>
+            <h3></h3>
+            <p class="manager"></p>
+          </div>
+        </div>
+        <div class="highlights"></div>
+        <div class="card-actions">
+          <button class="expand" aria-label="Ver mais informações" title="Ver mais informações" aria-expanded="false">
+            <span aria-hidden="true">↓</span>
+          </button>
+        </div>
+        <div class="details" hidden></div>
+      </article>
+    </template>
+    
+    <script src="app.js?v=25-text-justify"></script>
+  </body>
+</html>
